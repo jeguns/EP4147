@@ -45,10 +45,7 @@ S = 0
 for(i in 1:16){  S = S + 1.06^i}
 5000*S
 
-
-
-
-# 3. Considerando una tasa efectiva anual de 6.17%, determine el valor presente de una anualidad de:
+# 6. Considerando una tasa efectiva anual de 6.17%, determine el valor presente de una anualidad de:
 
 # a. Un pago vencido de 1200 soles
 
@@ -66,7 +63,7 @@ pv.annuity(r = im, n = 2, pmt = -1200, type = 0)
 
 pv.annuity(r = im, n = 10, pmt = -1200, type = 0)
 
-# 4. Una empresa consigue un financiamiento de 15 mil soles, el cual será liquidado durante 10 meses al final de cada uno de éstos, a una tasa de 2% mensual. ¿Cuál es el valor de cada prestación?
+# 7. Una empresa consigue un financiamiento de 15 mil soles, el cual será liquidado durante 10 meses al final de cada uno de éstos, a una tasa de 2% mensual. ¿Cuál es el valor de cada prestación?
 
 pmt(r = 0.02, n = 10, pv = -15000, fv = 0, type = 0)
 
@@ -78,9 +75,31 @@ S = 1
 for(i in 1:15){  S = S + 1.06^i}
 5000*S
 
+# 9. Considere una anualidad con pagos trimestrales vencidos de S/. 5000 soles durante dos años, 
+# pactados a una Tasa Efectiva Semestral de 7:5%. Hallar el valor de la anualidad al final 
+# del primer año.
 
+i = 1.075^0.5-1
+S = 5000*((1+i)^4-1)/i
+A = 5000*(1-(1+i)^-4)/i
+S + A
 
+# 10. Se realiza el pago de una renta perpetua de 500 soles al inicio de cada mes, considerando una tasa 
+# de interés del 0.5% trimestral. ¿Cuál es el valor original de la prestación?
 
+i = 1.005^(1/3)-1
+d = i/(1+i)
+1/d*500
+
+# 11. Se realiza el préstamo de un capital de 10 mil soles, los cuales deben ser pagados de manera perpetua. 
+# Si el pago mensual es de 20 soles, determine la TEA.
+
+R   = 20
+VP  = 10000
+TEM = R/VP
+TEM
+TEA = (1+TEM)^12-1
+TEA
 
 
 
