@@ -91,6 +91,8 @@ i = 1.005^(1/3)-1
 d = i/(1+i)
 1/d*500
 
+pv.perpetuity(r=i,pmt=-500,type=1)
+
 # 11. Se realiza el préstamo de un capital de 10 mil soles, los cuales deben ser pagados de manera perpetua. 
 # Si el pago mensual es de 20 soles, determine la TEA.
 
@@ -101,5 +103,5 @@ TEM
 TEA = (1+TEM)^12-1
 TEA
 
-
+pv.perpetuity(r = TEM, pmt = -20, type = 0)
 
