@@ -67,7 +67,7 @@ pv.annuity(r = im, n = 10, pmt = -1200, type = 0)
 
 pmt(r = 0.02, n = 10, pv = -15000, fv = 0, type = 0)
 
-# 8. En el ejercicio anterior, ¿Cuál sería el monto a ser retirado en el año 2016?
+# 8. En el último ejercicio de la diapositiva 9, ¿Cuál sería el monto a ser retirado en el año 2016?
 
 fv.annuity(r = 0.06, n = 16, pmt = -5000, type = 0) 
 
