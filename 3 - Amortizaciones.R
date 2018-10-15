@@ -33,3 +33,6 @@ a = pmt(amt = 5000, maturity = 5, rate = 0.09);a
 i = rate(amt = 5000, maturity = 5, pmt = a);i
 T = loan(rate = 0.09, maturity = 5, amt = 5000, type = "french");T
 cashflow(T)
+
+T = loan(rate = 0.03, maturity = 4, amt = 20000, type = "bullet");T
+cashflow(T)
