@@ -36,3 +36,6 @@ cashflow(T)
 
 T = loan(rate = 0.03, maturity = 4, amt = 20000, type = "bullet");T
 cashflow(T)
+
+T = loan(rate = 0.03, maturity = 4, amt = 20000, type = "german");T
+cashflow(T)
